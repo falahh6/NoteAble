@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Sofia+Sans+Semi+Condensed:wght@200;400&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.notes {
+    display: flex;
+    height: 100%;
+}
+
+.notes * {
+    font-family: sans-serif;
+}
+
+.notes__sidebar {
+    /* border-right: 2px solid #dddddd; */
+    flex-shrink: 0;
+    overflow-y: auto;
+    padding: 1em;
+    width: 300px;
+    font-size: 10px;
+}
+
+.notes__add {
+    background: #009578;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: 0.75em 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+.notes__add:hover {
+    background: #00af8c;
+}
+
+.notes__list-item {
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.notes__list-item--selected {
+    background: #eeeeee;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.notes__small-title,
+.notes__small-updated {
+    padding: 10px;
+}
+
+.notes__small-title {
+    font-size: 1.2em;
+}
+
+.notes__small-body {
+    padding: 0 10px;
+}
+
+.notes__small-updated {
+    color: #aaaaaa;
+    font-style: italic;
+    text-align: right;
+}
+
+.notes__preview {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 3em;
+    flex-grow: 1;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.notes__title,
+.notes__body {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+.notes__title {
+    font-size: 3em;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(107, 107, 107);
+    font-weight: 600;
+}
+
+.notes__body {
+    flex-grow: 1;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 2em;
+    resize: none;
+}
+
+@media screen and (max-width:450px) {
+    .notes__sidebar {
+        position: absolute;
+        left: -50rem;
+        background-color: #ffffff;
+        width: 95%;
+        /* margin: auto; */
+        height: 100vh;
+    }
+
+    .notes__sidebar.is-active {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    .notes__title {
+        font-size: 2rem;
+    }
+
+    .notes__body {
+        margin-top: 10px;
+    }
+
+}

@@ -1,3 +1,7 @@
+.area {
+    z-index: -1;
+}
+
 .circles {
     position: absolute;
     top: 0;

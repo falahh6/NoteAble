@@ -23,6 +23,10 @@ body {
 
 .devs {
     font-family: 'Mukta', sans-serif;
+    /* position: absolute;
+    bottom: -2rem;
+    left: 2rem; */
+    text-align: center;
 }
 
 header {
@@ -111,6 +115,10 @@ main {
 @media screen and (max-width:500px) {
     body {
         background-image: url(/res/Simple\ Shiny-mobo.svg);
+    }
+
+    #main {
+        height: 90vh;
     }
 
     h1 {

@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
 
+@font-face {
+    font-family: 'RoxboroughCF';
+    src: url(/res/Roxborough\ CF.ttf);
+}
+
 body {
     width: 80%;
     margin: auto;
@@ -29,6 +34,11 @@ body {
     text-align: center;
 }
 
+#logo__name {
+    font-family: 'RoxboroughCF';
+    color: black;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -49,9 +59,13 @@ h1 span {
     font-weight: 400;
 }
 
+#able {
+    color: #004AAD;
+}
+
 img {
     width: 200px;
-    margin: -2.5rem;
+    /* margin: rem; */
 }
 
 p {
@@ -67,40 +81,48 @@ p {
 #log-in__btn,
 #sign-in__btn {
     border: none;
-    padding: 10px;
-    color: rgb(128, 128, 128);
+    padding: 10px 20px;
+    color: #004AAD;
+    font-weight: 300;
     transition: all 0.5s ease-in-out;
     border: 1px solid transparent;
+    border-radius: 20px;
 }
 
 #log-in__btn {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.216);
+
 }
 
 #sign-in__btn:hover {
-    border: 1px solid darkgray;
+    border: 1px solid #004bad6d;
 }
 
 #log-in__btn:hover {
-    background-color: #efefef;
+    background-color: #004bad89;
+    color: white;
 }
 
 #cta__btn {
-    padding: 10px;
+    padding: 10px 30px;
     font-size: 20px;
     text-align: center;
     margin: auto;
     border: 1px solid transparent;
     transition: all 0.3s ease-in-out;
+    background-color: #004AAD;
+    border-radius: 30px;
 }
 
 #cta__btn a {
     text-decoration: none;
-    color: rgb(95, 95, 95);
+    color: white;
 }
 
 #cta__btn:hover {
     border: 1px solid darkgray;
+    font-size: 18px;
+    background-color: #004bada9;
 }
 
 main {
@@ -115,6 +137,15 @@ main {
 @media screen and (max-width:500px) {
     body {
         background-image: url(/res/Simple\ Shiny-mobo.svg);
+    }
+
+    #logo-img {
+        width: 120px;
+    }
+
+    #log-in__btn,
+    #sign-in__btn {
+        display: none;
     }
 
     #main {

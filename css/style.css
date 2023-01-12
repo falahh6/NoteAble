@@ -95,6 +95,10 @@ main {
 }
 
 @media screen and (max-width:500px) {
+    body {
+        background-image: url(/res/Simple\ Shiny-mobo.svg);
+    }
+
     h1 {
         margin-top: 4rem;
         font-size: 34px;

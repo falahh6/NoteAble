@@ -6,11 +6,16 @@
     src: url(/res/Roxborough\ CF.ttf);
 }
 
+* {
+    -webkit-tap-highlight-color: none;
+}
+
 body {
     width: 80%;
     margin: auto;
     background-image: url(/res/Simple\ Shiny.svg);
     background-repeat: no-repeat;
+    user-select: none;
 }
 
 #main {
@@ -112,6 +117,7 @@ p {
     transition: all 0.3s ease-in-out;
     background-color: #004AAD;
     border-radius: 30px;
+    z-index: 999;
 }
 
 #cta__btn a {

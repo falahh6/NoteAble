@@ -6,10 +6,6 @@
     src: url(/res/Roxborough\ CF.ttf);
 }
 
-* {
-    -webkit-tap-highlight-color: none;
-}
-
 body {
     width: 80%;
     margin: auto;
@@ -98,7 +94,7 @@ p {
 
 #log-in__btn {
     background-color: rgba(255, 255, 255, 0.216);
-
+    -webkit-tap-highlight-color: none;
 }
 
 #sign-in__btn:hover {
@@ -119,8 +115,9 @@ p {
     background-color: #004AAD;
     border-radius: 30px;
     z-index: 999;
-    font-family: 'Roxborough';
+    font-family: 'RoxboroughCF';
     letter-spacing: 1px;
+    -webkit-tap-highlight-color: none;
 }
 
 #cta__btn a {

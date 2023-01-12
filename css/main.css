@@ -27,7 +27,7 @@ body {
 
 
 .notes__add {
-    background: #494949;
+    background: #004AAD;
     border: none;
     border-radius: 7px;
     color: #ffffff;
@@ -42,7 +42,7 @@ body {
 }
 
 .notes__add:hover {
-    background: #9d9d9d;
+    background: #004bada5;
 }
 
 .notes__list-item {
@@ -55,9 +55,10 @@ body {
 }
 
 .notes__list-item--selected {
-    background: #dbdbdb;
+    background: #eeeeee75;
     border-radius: 7px;
     font-weight: bold;
+    border: 1px solid #dbdbdb;
 }
 
 .notes__small-title,
@@ -84,7 +85,7 @@ body {
     flex-direction: column;
     padding: 2em 3em;
     flex-grow: 1;
-    background-color: #eeeeee;
+    background-color: #f3f3f3;
     border-radius: 4px;
     margin: 10px;
 }
@@ -111,6 +112,7 @@ body {
     line-height: 1.5;
     margin-top: 2em;
     resize: none;
+    background-color: #eeeeee75;
 }
 
 .hamburger {
@@ -143,5 +145,9 @@ body {
 
     .hamburger {
         display: inline-block;
+    }
+
+    .notes__preview {
+        padding: 1em 2em;
     }
 }

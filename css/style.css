@@ -151,7 +151,7 @@ main {
 }
 
 .card {
-    width: 190px;
+    /* width: 190px; */
     height: 294px;
     background: #f5f5f5;
     padding: 2rem 1.5rem;

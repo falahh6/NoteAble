@@ -7,7 +7,7 @@
  */
 .hamburger {
     padding: 15px 15px;
-    display: inline-block;
+    /* display: inline-block; */
     cursor: pointer;
     transition-property: opacity, filter;
     transition-duration: 0.15s;
@@ -19,6 +19,12 @@
     border: 0;
     margin: 0;
     overflow: visible;
+}
+
+@media screen and (max-width:450px) {
+    .hamburger {
+        display: none;
+    }
 }
 
 .hamburger:hover {

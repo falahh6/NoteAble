@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+body {
+    width: 80%;
+    margin: auto;
+    background-image: url(/res/Simple\ Shiny.svg);
+    background-repeat: no-repeat;
+}
+
+#main {
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 54px;
+    text-align: center;
+    margin-top: 8rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: rgb(100, 100, 100);
+}
+
+h1 span {
+    font-weight: 400;
+}
+
+img {
+    width: 200px;
+    margin: -2.5rem;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    color: #0e0b3d;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 0;
+}
+
+#log-in__btn,
+#sign-in__btn {
+    border: none;
+    padding: 10px;
+    color: rgb(128, 128, 128);
+    transition: all 0.5s ease-in-out;
+    border: 1px solid transparent;
+}
+
+#log-in__btn {
+    background-color: transparent;
+}
+
+#sign-in__btn:hover {
+    border: 1px solid darkgray;
+}
+
+#log-in__btn:hover {
+    background-color: #efefef;
+}
+
+#cta__btn {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+#cta__btn a {
+    text-decoration: none;
+    color: rgb(95, 95, 95);
+}
+
+#cta__btn:hover {
+    border: 1px solid darkgray;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.how {
+    height: 100vh;
+}
+
+@media screen and (max-width:500px) {
+    h1 {
+        margin-top: 4rem;
+        font-size: 34px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    #cta__btn {
+        /* margin-top: 30px; */
+        font-size: 12px;
+    }
+}

@@ -17,3 +17,13 @@ notesAddBtn.addEventListener('click',()=>{
     hamburger.classList.remove('is-active');
     sidebar.classList.remove('is-active');
 })
+
+const noteList = document.querySelectorAll('.notes__list-item');
+noteList.forEach( note => { 
+    note.addEventListener('click',()=>{
+        hamburger.classList.remove('is-active');
+        sidebar.classList.remove('is-active');
+    })
+});
+
+console.log(noteList);

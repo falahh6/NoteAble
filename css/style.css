@@ -106,11 +106,13 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: end;
 }
 
 #log-in__btn,
 #sign-in__btn,
-#team__btn {
+#team__btn,
+#save__btn {
     font-family: 'Inter', sans-serif;
     border: none;
     padding: 10px 20px;
@@ -136,6 +138,21 @@ p {
     margin-right: 10px;
 }
 
+#save__btn {
+    border: 1px solid #004badae;
+    padding: 5px 10px;
+}
+
+#save__btn:hover {
+    background-color: #004badae;
+    color: white;
+}
+
+#tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 #partition {
     height: 25px;
@@ -152,6 +169,10 @@ p {
 #log-in__btn:hover,
 #team__btn:hover {
     border: 1px solid #004badae;
+}
+
+#team__btn {
+    display: none;
 }
 
 #cta__btn {
@@ -303,6 +324,14 @@ main {
     border-radius: 50%;
 }
 
+.hamburger {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
 @media screen and (max-width:500px) {
     #logo-img {
         width: 120px;
@@ -357,6 +386,31 @@ main {
         margin: 0;
         padding: 0;
         justify-content: center;
+    }
+
+    .hamburger,
+    .close {
+        display: block;
+        margin: 5px;
+        width: fit-content;
+        border-radius: 4px;
+    }
+
+    .close:hover,
+    .hamburger:hover {
+        background-color: rgba(128, 128, 128, 0.251);
+    }
+
+    .hamburger.is-active {
+        display: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .close.is-active {
+        display: block;
     }
 
 }

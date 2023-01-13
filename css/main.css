@@ -22,9 +22,8 @@ body {
     padding: 1em;
     width: 300px;
     font-size: 10px;
+    z-index: 999;
 }
-
-
 
 .notes__add {
     background: #004AAD;
@@ -127,6 +126,7 @@ body {
         width: 95%;
         /* margin: auto; */
         height: 100vh;
+        transition: all 0.5s ease-in;
     }
 
     .notes__sidebar.is-active {

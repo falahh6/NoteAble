@@ -6,17 +6,34 @@
     src: url(/res/Roxborough\ CF.ttf);
 }
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    scroll-behavior: smooth;
+    position: relative;
+}
+
 body {
     width: 80%;
     margin: auto;
+    /* background-image: url(/res/mesh-bg.png); */
     background-image: url(/res/mesh-bg.png);
     background-repeat: no-repeat;
     user-select: none;
     background-size: cover;
+    scroll-behavior: smooth;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 #main {
-    height: 95vh;
+    height: 90vh;
 }
 
 #auth {
@@ -47,14 +64,14 @@ header {
     justify-content: space-between;
 }
 
-h1 {
+#main h1 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 54px;
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 6rem;
     font-weight: 300;
     margin-bottom: 20px;
-    color: rgb(100, 100, 100);
+    color: #646464;
 }
 
 h1 span {
@@ -80,31 +97,57 @@ p {
     margin-top: 0;
 }
 
+#navbar {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 #log-in__btn,
-#sign-in__btn {
+#sign-in__btn,
+#team__btn {
+    font-family: 'Inter', sans-serif;
     border: none;
     padding: 10px 20px;
     color: #004AAD;
-    font-weight: 300;
+    font-weight: 400;
     transition: all 0.5s ease-in-out;
     border: 1px solid transparent;
     border-radius: 20px;
     z-index: 999;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#sign-in__btn {
+    background-color: #004badae;
+    color: white;
 }
 
 #log-in__btn {
-    background-color: rgba(255, 255, 255, 0.216);
+    /* background-color: rgba(255, 255, 255, 0.216); */
     -webkit-tap-highlight-color: none;
+    margin-right: 10px;
+}
+
+
+#partition {
+    height: 25px;
+    width: 2px;
+    background-color: black;
+    margin: 0 1rem;
 }
 
 #sign-in__btn:hover {
-    border: 1px solid #004bad6d;
+    border: 1px solid #004badae;
+    padding: 12px 22px;
 }
 
-#log-in__btn:hover {
-    background-color: #004bad89;
-    color: white;
+#log-in__btn:hover,
+#team__btn:hover {
+    border: 1px solid #004badae;
 }
 
 #cta__btn {
@@ -141,8 +184,6 @@ main {
     height: 100vh;
 }
 
-
-
 #cards {
     height: 100vh;
     display: flex;
@@ -151,7 +192,7 @@ main {
 }
 
 .card {
-    /* width: 190px; */
+    width: 20%;
     height: 294px;
     background: #f5f5f5;
     padding: 2rem 1.5rem;
@@ -239,8 +280,19 @@ main {
     transform: scale(1.1);
 }
 
+#team {
+    padding: 6rem 0;
+    height: 120vh;
+}
+
 #team__h1 {
-    font-family: 'RoxboroughCF';
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;
+    color: #646464;
+    margin: auto;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid rgb(134, 134, 134);
+    width: fit-content;
 }
 
 #profiles {
@@ -248,26 +300,42 @@ main {
 }
 
 @media screen and (max-width:500px) {
-    body {
-        background-image: url(/res/Simple\ Shiny-mobo.svg);
-    }
-
     #logo-img {
         width: 120px;
     }
 
     #log-in__btn,
-    #sign-in__btn {
+    #sign-in__btn,
+    #team__btn {
+        display: none;
+    }
+
+    #partition {
         display: none;
     }
 
     #main {
-        height: 90vh;
+        height: 100vh;
     }
 
-    h1 {
+    #main h1 {
         margin-top: 35%;
         font-size: 34px;
+    }
+
+    .card {
+        width: 60%;
+        font-size: 14px;
+        margin: auto;
+    }
+
+    .cards {
+        position: absolute;
+        top: 20rem;
+    }
+
+    #team {
+        display: none;
     }
 
     p {

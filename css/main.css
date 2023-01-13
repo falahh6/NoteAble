@@ -2,7 +2,7 @@
 
 html,
 body {
-    height: 100%;
+    margin: 0;
     margin: 0;
 }
 
@@ -87,6 +87,7 @@ body {
     background-color: #f3f3f3;
     border-radius: 4px;
     margin: 10px;
+    height: 80vh;
 }
 
 .notes__title,
@@ -114,19 +115,21 @@ body {
     background-color: #eeeeee75;
 }
 
-.hamburger {
-    display: none;
-}
-
 @media screen and (max-width:450px) {
+    .notes {
+        height: 100vh;
+    }
+
     .notes__sidebar {
         position: absolute;
-        left: -50rem;
         background-color: #ffffff;
         width: 95%;
         /* margin: auto; */
-        height: 100vh;
-        transition: all 0.5s ease-in;
+        height: 90vh;
+        left: -120%;
+        transition: left 0.5s ease-in-out;
+        border-radius: 8px;
+        margin-top: 1rem;
     }
 
     .notes__sidebar.is-active {
@@ -148,6 +151,16 @@ body {
     }
 
     .notes__preview {
-        padding: 1em 2em;
+        padding: 1em;
+        margin: 1rem 0;
+        height: 80vh;
+    }
+
+    .notes__title {
+        font-size: 26px;
+    }
+
+    .notes__body {
+        font-size: 18px;
     }
 }

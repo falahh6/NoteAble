@@ -333,6 +333,11 @@ main {
 }
 
 @media screen and (max-width:500px) {
+    body {
+        width: 90%;
+        margin: 0 1rem;
+    }
+
     #logo-img {
         width: 120px;
     }

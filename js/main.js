@@ -50,13 +50,18 @@ doc.setFontSize(18);
 doc.setFontType('normal');
 doc.text(20,40,notesBody);
 
+// doc.addImage(dataURL, 'PNG', 300, 670, 120, 70);
 var saveBtn = document.getElementById('save__btn');
 saveBtn.addEventListener('click',()=>{
     doc.save('your-notes.pdf');
-    console.log(notesTitle);
-    console.log(notesBody);
     swal('Your pdf is saved successfully!');
 })
 
 var notesLists = document.querySelectorAll('.notes__list-item');
 console.log(notesLists);
+
+notesLists.forEach(notes => {
+    notes.addEventListener('click', ()=>{
+        console.log(notes);
+    })
+});

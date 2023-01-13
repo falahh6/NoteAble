@@ -21,8 +21,8 @@ html {
 }
 
 body {
-    width: 80%;
     margin: auto;
+    padding: 0 10%;
     /* background-image: url(/res/mesh-bg.png); */
     background-image: url(/res/mesh-bg.png);
     background-repeat: no-repeat;
@@ -334,8 +334,7 @@ main {
 
 @media screen and (max-width:500px) {
     body {
-        width: 90%;
-        margin: 0 1rem;
+        padding: auto 3%;
     }
 
     #logo-img {

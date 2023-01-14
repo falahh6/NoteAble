@@ -113,7 +113,8 @@ p {
 #log-in__btn,
 #sign-in__btn,
 #team__btn,
-#save__btn {
+#save__btn,
+.notes__add {
     font-family: 'Inter', sans-serif;
     border: none;
     padding: 10px 20px;
@@ -139,14 +140,24 @@ p {
     margin-right: 10px;
 }
 
-#save__btn {
+#save__btn,
+.notes__add {
     border: 1px solid #004badae;
     padding: 5px 10px;
+    border-radius: 20px;
+    color: #004AAD;
 }
 
-#save__btn:hover {
+#save__btn:hover,
+.notes__add:hover {
     background-color: #004badae;
     color: white;
+}
+
+.notes__add {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px 0;
 }
 
 #tools {

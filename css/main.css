@@ -19,13 +19,13 @@ body {
     /* border-right: 2px solid #dddddd; */
     flex-shrink: 0;
     overflow-y: auto;
-    padding: 1em;
+    padding: 1.6em;
     width: 300px;
     font-size: 10px;
     z-index: 999;
 }
 
-.notes__add {
+/* .notes__add {
     background: #004AAD;
     border: none;
     border-radius: 7px;
@@ -37,16 +37,17 @@ body {
     padding: 0.75em 0;
     width: 100%;
     font-size: 16px;
-    /* transition: all 0.5s ease-in-out; */
 }
 
 .notes__add:hover {
     background: #004bada5;
-}
+} */
 
 .notes__list-item {
     cursor: pointer;
     font-size: 12px;
+    border-radius: 7px;
+    margin-bottom: 6px;
 }
 
 .notes__list-item:hover {
@@ -125,19 +126,16 @@ body {
         position: absolute;
         background-color: #ffffff;
         width: 95%;
-        /* margin: auto; */
-        height: 81vh;
-        left: -30rem;
+        height: 80vh;
         border-radius: 8px;
         margin-top: 1rem;
-        transition: left 0.5s ease-in-out;
+        /* left: -30rem; */
+        transform: translateX(-30rem);
+        transition: transform 1s ease-in-out;
     }
 
     .notes__sidebar.is-active {
-        /* position: absolute; */
-        left: 0;
-        /* right: 0; */
-        transition: left 0.5s ease-in-out;
+        transform: translateX(0);
     }
 
     .notes__title {

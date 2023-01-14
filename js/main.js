@@ -52,8 +52,12 @@ doc.text(20,40,notesBody);
 
 // doc.addImage(dataURL, 'PNG', 300, 670, 120, 70);
 var saveBtn = document.getElementById('save__btn');
-saveBtn.addEventListener('click',()=>{
-    doc.save('your-notes.pdf');
+saveBtn.addEventListener('click',(event)=>{
+   if(event.target.classList.contains('notes__list-item')){
+    var parent = event.target;
+    console.log(parent);
+   }
+    // doc.save('your-notes.pdf');
     swal('Your pdf is saved successfully!');
 })
 
@@ -65,3 +69,4 @@ notesLists.forEach(notes => {
         console.log(notes);
     })
 });
+

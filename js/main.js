@@ -57,7 +57,7 @@ saveBtn.addEventListener('click',(event)=>{
     var parent = event.target;
     console.log(parent);
    }
-    doc.save('your-notes.pdf');
+    doc.save(notesTitle+'.pdf');
     swal('Your pdf is saved successfully!');
 })
 

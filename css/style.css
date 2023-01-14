@@ -55,6 +55,7 @@ body {
     bottom: -2rem;
     left: 2rem; */
     text-align: center;
+    background-color: transparent;
 }
 
 #logo__name {
@@ -334,7 +335,7 @@ main {
 
 @media screen and (max-width:500px) {
     body {
-        padding: auto 3%;
+        padding: auto 2%;
     }
 
     #logo-img {

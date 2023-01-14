@@ -37,7 +37,7 @@ body {
     padding: 0.75em 0;
     width: 100%;
     font-size: 16px;
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
 }
 
 .notes__add:hover {
@@ -84,7 +84,7 @@ body {
     flex-direction: column;
     padding: 2em 3em;
     flex-grow: 1;
-    background-color: #f3f3f3;
+    background-color: #f3f3f38b;
     border-radius: 4px;
     margin: 10px;
     height: 80vh;
@@ -97,6 +97,7 @@ body {
     width: 100%;
     background-color: transparent;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    background-color: transparent;
 }
 
 .notes__title {
@@ -112,7 +113,7 @@ body {
     line-height: 1.5;
     margin-top: 2em;
     resize: none;
-    background-color: #eeeeee75;
+    background-color: transparent;
 }
 
 @media screen and (max-width:450px) {
@@ -125,17 +126,18 @@ body {
         background-color: #ffffff;
         width: 95%;
         /* margin: auto; */
-        height: 90vh;
-        left: -120%;
-        transition: left 0.5s ease-in-out;
+        height: 81vh;
+        left: -30rem;
         border-radius: 8px;
         margin-top: 1rem;
+        transition: left 0.5s ease-in-out;
     }
 
     .notes__sidebar.is-active {
-        position: absolute;
+        /* position: absolute; */
         left: 0;
-        right: 0;
+        /* right: 0; */
+        transition: left 0.5s ease-in-out;
     }
 
     .notes__title {
@@ -152,7 +154,7 @@ body {
 
     .notes__preview {
         padding: 1em;
-        margin: 1rem 0;
+        margin: 1rem -1rem;
         height: 80vh;
     }
 

@@ -36,37 +36,47 @@ notesAddBtn.addEventListener('click',()=>{
 
 // Save the notes 
 // import jsPDF from "jspdf";
-var notesTitle = document.querySelector('.notes__title').value;
-var notesBody = document.querySelector('.notes__body').value;
 
-var doc = new jsPDF();
-doc.setFont('Times');
-doc.setFontSize(32);
-doc.setFontType('bold');
-doc.text(20,20,notesTitle);
 
-doc.setFont('helvetica');
-doc.setFontSize(18);
-doc.setFontType('normal');
-doc.text(20,40,notesBody);
+
+
 
 // doc.addImage(dataURL, 'PNG', 300, 670, 120, 70);
-var saveBtn = document.getElementById('save__btn');
-saveBtn.addEventListener('click',(event)=>{
-   if(event.target.classList.contains('notes__list-item')){
-    var parent = event.target;
-    console.log(parent);
-   }
-    doc.save(notesTitle+'.pdf');
-    swal('Your pdf is saved successfully!');
-})
+// var saveBtn = document.getElementById('save__btn');
+// saveBtn.addEventListener('click',(event)=>{
+//    if(event.target.classList.contains('notes__list-item--selected')){
+//     var parent = event.target;
+//     console.log(parent);
+//    }
+//     
+// })
+
 
 var notesLists = document.querySelectorAll('.notes__list-item');
-console.log(notesLists);
-
 notesLists.forEach(notes => {
     notes.addEventListener('click', ()=>{
-        console.log(notes);
+        if(notes.classList.contains('notes__list-item--selected')){
+            var notesTitle =  notes.childNodes[1].innerText;
+            var notesBody =  notes.childNodes[3].innerText;
+        
+            var saveBtn = document.getElementById('save__btn');
+            saveBtn.addEventListener('click',()=>{
+        
+                var doc = new jsPDF();
+                
+                doc.setFont('Times');
+                doc.setFontSize(32);
+                doc.setFontType('bold');
+                doc.text(20,20,notesTitle);
+        
+                doc.setFont('helvetica');
+                doc.setFontSize(18);
+                doc.setFontType('normal');
+                doc.text(20,40,notesBody);
+                doc.save(notesTitle+'.pdf');
+                // console.log(notesTitle);
+                swal('Your pdf is saved successfully!');
+            })
+        }
     })
 });
-

@@ -140,16 +140,22 @@ p {
     margin-right: 10px;
 }
 
-#save__btn,
-.notes__add {
+.notes__add:hover {
+    border: 1px solid #004badae;
+    color: #004AAD;
+    background-color: white;
+}
+
+#save__btn {
     border: 1px solid #004badae;
     padding: 5px 10px;
     border-radius: 20px;
     color: #004AAD;
+    background-color: white;
 }
 
 #save__btn:hover,
-.notes__add:hover {
+.notes__add {
     background-color: #004badae;
     color: white;
 }
@@ -251,6 +257,11 @@ footer {
 
 .close {
     display: none;
+}
+
+#no-notes__prompt {
+    position: absolute;
+    font-size: 100px;
 }
 
 @media screen and (max-width:500px) {

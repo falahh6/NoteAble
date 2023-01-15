@@ -56,6 +56,7 @@ body {
     left: 2rem; */
     text-align: center;
     background-color: transparent;
+    font-size: 12px;
 }
 
 #logo__name {
@@ -264,6 +265,10 @@ footer {
     font-size: 100px;
 }
 
+#disclaimer {
+    font-size: 12px;
+}
+
 @media screen and (max-width:500px) {
     body {
         padding: auto 2%;
@@ -349,4 +354,8 @@ footer {
         display: block;
     }
 
+    #disclaimer {
+        font-size: 8px;
+        letter-spacing: normal;
+    }
 }

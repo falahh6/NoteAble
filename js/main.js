@@ -54,11 +54,11 @@ notesAddBtn.addEventListener('click',()=>{
 
 var notesLists = document.querySelectorAll('.notes__list-item');
 notesLists.forEach(notes => {
-    notes.addEventListener('click', ()=>{
+    notes.addEventListener('click', (event)=>{
         if(notes.classList.contains('notes__list-item--selected')){
             var notesTitle =  notes.childNodes[1].innerText;
             var notesBody =  notes.childNodes[3].innerText;
-        
+            console.log(notesTitle, notesBody);
             var saveBtn = document.getElementById('save__btn');
             saveBtn.addEventListener('click',()=>{
         

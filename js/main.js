@@ -23,7 +23,8 @@ notesAddBtn.addEventListener('click',()=>{
     close.classList.toggle('is-active');
     sidebar.classList.remove('is-active');
 })
-
+let modal = document.getElementsByClassName('modal');
+modal.show();
 // const noteList = document.querySelectorAll('.notes__list-item');
 // noteList.forEach( note => { 
 //     note.addEventListener('click',()=>{

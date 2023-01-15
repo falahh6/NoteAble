@@ -19,9 +19,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="shortcut icon" href="/res/NoteAble-Favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body class="body animate__animated animate__pulse">
+    <script>
+        $(window).on('load', function () {
+            $('#myModal').modal('show');
+        });
+    </script>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Please note</h4>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>The <strong>Save</strong> feature is in developemental stage, So it might not work
+                            properly!</li>
+                        <li>Please don't keep any Confidential information on this notes because it has no privacy
+                            <strong>authorization and authentication</strong>.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <img id="logo-img" src="/res/NoteAble - logo.svg" alt="">
     </header>

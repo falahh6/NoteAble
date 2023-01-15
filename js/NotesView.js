@@ -13,7 +13,7 @@ export default class NotesView {
             <div class="notes__preview">
                 <p id="disclaimer">Please ensure to Refresh the page and save your Notes once you are done!</p>
                 <input class="notes__title" type="text" placeholder="New Note...">
-                <textarea class="notes__body" placeholder="Take Note..." ></textarea>
+                <textarea class="notes__body" placeholder="Take Note..."></textarea>
             </div>
         `;
 

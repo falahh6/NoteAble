@@ -64,6 +64,10 @@ body {
     color: black;
 }
 
+#logo__name>span {
+    color: #004AAD;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -358,4 +362,22 @@ footer {
         font-size: 8px;
         letter-spacing: normal;
     }
+
+    .modal-content {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.modal-header {
+    padding: 12px;
+}
+
+.modal-title {
+    font-size: 20px;
+}
+
+.modal-body {
+    font-size: 14px;
+    padding-bottom: 4px;
 }

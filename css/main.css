@@ -89,7 +89,7 @@ body {
     background-color: #f3f3f38b;
     border-radius: 4px;
     margin: 10px;
-    height: 90vh;
+    height: 100vh;
 }
 
 .notes__title,
@@ -103,7 +103,7 @@ body {
 }
 
 .notes__title {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
     border-bottom: 1px solid rgb(107, 107, 107);
     font-weight: 600;
@@ -111,7 +111,7 @@ body {
 
 .notes__body {
     flex-grow: 1;
-    font-size: 1.2em;
+    font-size: 0.8em;
     line-height: 1.5;
     margin-top: 2em;
     resize: none;

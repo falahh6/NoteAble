@@ -11,12 +11,12 @@ export default class NotesView {
                 <div class="notes__list"></div>
             </div>
             <div class="notes__preview">
-                <p id="disclaimer">Please ensure to Refresh the page and save your Notes once you are done!</p>
+           
                 <input class="notes__title" type="text" placeholder="New Note...">
                 <textarea class="notes__body" placeholder="Take Note..."></textarea>
             </div>
         `;
-
+ // <p id="disclaimer">Please ensure to Refresh the page and save your Notes once you are done!</p>
         const btnAddNote = this.root.querySelector(".notes__add");
         const inpTitle = this.root.querySelector(".notes__title");
         const inpBody = this.root.querySelector(".notes__body");
@@ -86,14 +86,52 @@ export default class NotesView {
         this.root.querySelector(".notes__title").value = note.title;
         this.root.querySelector(".notes__body").value = note.body;
 
+        
         this.root.querySelectorAll(".notes__list-item").forEach(noteListItem => {
             noteListItem.classList.remove("notes__list-item--selected");
         });
 
         this.root.querySelector(`.notes__list-item[data-note-id="${note.id}"]`).classList.add("notes__list-item--selected");
+
+        //save notes
+        const btnSaveNote = document.getElementById("save__btn");
+        btnSaveNote.removeEventListener("click", this.saveNoteListener);
+            this.saveNoteListener = () => {
+                if(note.title == "" || note.body == ""){
+                    swal('','Empty notes cannot be saved', 'error')
+                } else{
+                    console.log("Title : " + note.title);
+                    console.log("Body : " + note.body);
+                    var notesTitle = note.title;
+                    var notesBody = note.body;
+                    var lines = notesBody.split('\n');
+                    var docDefinition = {
+                        content: [
+                            { text: notesTitle, style: 'header' },
+                            { text: lines, style: 'notesBody' }
+                        ],
+                        styles: {
+                            header: {
+                                fontSize: 22,
+                                bold: true
+                            },
+                            notesBody: {
+                                fontSize: 16,
+                                lineHeight:1.5
+                            }
+                        }
+                    };
+                    // pdfMake.createPdf(docDefinition).download(notesTitle+'.pdf');
+        
+                    swal('','Your pdf is saved successfully!', 'success')
+                }    
+        }
+        btnSaveNote.addEventListener("click", this.saveNoteListener);
     }
 
     updateNotePreviewVisibility(visible) {
         this.root.querySelector(".notes__preview").style.visibility = visible ? "visible" : "hidden";
     }
 }
+
+

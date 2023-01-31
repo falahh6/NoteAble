@@ -127,6 +127,38 @@ export default class NotesView {
                 }    
         }
         btnSaveNote.addEventListener("click", this.saveNoteListener);
+
+        //copy notes
+        const copyButton = document.getElementById('copy__btn');
+        copyButton.removeEventListener('click',this.copyNoteListener);
+        this.copyNoteListener = () =>{
+            const combinedText = `Title : ${note.title}\nBody : ${note.body}`;
+            navigator.clipboard.writeText(combinedText).then(() => {
+                console.log("Combined Input and Textarea value copied to clipboard!");
+            });
+        }
+        copyButton.addEventListener("click", this.copyNoteListener);
+
+        //share notes
+        const shareButton = document.getElementById('share__btn');
+        shareButton.removeEventListener('click', this.shareNoteListener);
+        this.shareNoteListener = () =>{
+            if(navigator.share){
+                const combinedText = `Title : ${note.title}\nBody : ${note.body}`;
+                navigator.share({
+                    title: note.title,
+                    text: combinedText,
+                    url: window.location.href
+                  }).then(() => {
+                    console.log("Combined Input and Textarea value shared!");
+                  }).catch(error => {
+                    console.error("Sharing failed:", error);
+                  });
+            } else{
+                console.error("Web Share API not supported in your browser.");
+            }
+        }
+        shareButton.addEventListener('click', this.shareNoteListener);   
     }
 
     updateNotePreviewVisibility(visible) {

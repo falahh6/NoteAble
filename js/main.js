@@ -22,40 +22,7 @@ notesAddBtn.addEventListener('click',()=>{
     sidebar.classList.remove('is-active');
 })
 
-
-// var notesLists = document.querySelectorAll('.notes__list-item');
-// notesLists.forEach(notes => {
-//     notes.addEventListener('click', ()=>{
-//         if(notes.classList.contains('notes__list-item--selected')){
-           
-            // console.log(notesBody);
-            // var notesBody =  notes.childNodes[3].innerText;
-            // console.log(notesTitle, notesBody);
-            // var saveBtn = document.getElementById('save__btn');
-            
-            // var saveBtn = document.getElementById('save__btn');
-//             saveBtn.addEventListener('click',()=>{
-//                 var lines = notesBody.split('\n');
-//                 var docDefinition = {
-//                     content: [
-//                         { text: notesTitle, style: 'header' },
-//                         { text: lines, style: 'notesBody' }
-//                     ],
-//                     styles: {
-//                         header: {
-//                             fontSize: 22,
-//                             bold: true
-//                         },
-//                         notesBody: {
-//                             fontSize: 16,
-//                             lineHeight:1.5
-//                         }
-//                     }
-//                 };
-//                 pdfMake.createPdf(docDefinition).download(notesTitle+'.pdf');
-//                 swal('Your pdf is saved successfully!');
-//             });            
-//             console.log(saveBtn);
-//         }
-//     })
-// });
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+  

@@ -116,8 +116,6 @@ p {
 #log-in__btn,
 #sign-in__btn,
 #team__btn,
-#save__btn,
-
 .notes__add {
     font-family: 'Inter', sans-serif;
     border: none;
@@ -146,6 +144,7 @@ p {
     -webkit-tap-highlight-color: none;
     margin-right: 10px;
     border: 1px solid #004badae;
+    background-color: transparent;
 }
 
 #log-in__btn:hover {
@@ -158,16 +157,29 @@ p {
     background-color: transparent;
 }
 
-#close__btn,
-#save__btn {
+#close__btn {
+    font-size: 12px;
     border: 1px solid #004badae;
     padding: 5px 10px;
     border-radius: 20px;
     color: #004AAD;
     background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+#save__btn,
+#copy__btn,
+#share__btn {
+    margin: 0 10px;
 }
 
 #save__btn:hover,
+#copy__btn:hover,
+#share__btn:hover {
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 5px #004badae);
+}
+
 .notes__add {
     background-color: #004badae;
     color: white;
@@ -358,6 +370,11 @@ footer {
 
     .modal-body {
         font-size: 12px;
+    }
+
+    .base {
+        display: flex;
+        align-items: center;
     }
 }
 

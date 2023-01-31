@@ -121,7 +121,7 @@ export default class NotesView {
                             }
                         }
                     };
-                    // pdfMake.createPdf(docDefinition).download(notesTitle+'.pdf');
+                    pdfMake.createPdf(docDefinition).download(notesTitle+'.pdf');
         
                     swal('','Your pdf is saved successfully!', 'success')
                 }    

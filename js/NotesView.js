@@ -108,7 +108,7 @@ export default class NotesView {
                     var docDefinition = {
                         content: [
                             { text: notesTitle, style: 'header' },
-                            { text: lines, style: 'notesBody' }
+                            notesBody
                         ],
                         styles: {
                             header: {

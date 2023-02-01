@@ -167,6 +167,11 @@ p {
     transition: all 0.5s ease-in-out;
 }
 
+#close__btn:hover {
+    background-color: #004AAD;
+    color: white;
+}
+
 #save__btn,
 #copy__btn,
 #share__btn {
@@ -194,7 +199,7 @@ p {
 #tools {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 #partition {
@@ -375,6 +380,10 @@ footer {
     .base {
         display: flex;
         align-items: center;
+    }
+
+    #tools {
+        justify-content: space-between;
     }
 }
 

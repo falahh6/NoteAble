@@ -148,7 +148,7 @@ export default class NotesView {
                 navigator.share({
                     title: note.title,
                     text: combinedText,
-                    url: window.location.href
+                    url: `\n\n ${window.location.href}`
                   }).then(() => {
                     console.log("Combined Input and Textarea value shared!");
                   }).catch(error => {

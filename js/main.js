@@ -26,3 +26,7 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
   });
   
+
+  setTimeout(()=>{
+    console.log('test timeout')
+  }, 5000);
